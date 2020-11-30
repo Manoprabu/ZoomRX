@@ -1,0 +1,12 @@
+<div class="list container">
+    <div class="paddBorder" fxLayout="row">
+        <div class="item-list" fxFlex="50%">List {{index + 1}}</div>
+        <div fxFlex="50%" class="floatrgt">
+            <button class="deleteList" id="{{index}}" (click)="deleteList(index);">Delete the list</button>
+        </div>
+    </div>
+    <div *ngFor="let n of cardCount; let j= index" class="paddBorder">
+        <app-card [cardIndex]="j" (delCardItem)="deleteCard($event);"></app-card>
+    </div>
+    <button class="addCard" (click)="addCard();">Add new card..</button>
+</div>

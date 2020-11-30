@@ -1,0 +1,8 @@
+  <div fxLayout="row wrap"  fxLayoutGap="20px">
+    <div class="list_Item list" fxFlex="30%" *ngFor="let k of listCount; let i = index">
+        <app-list [listItems]="listCount" (delItem)="deleteCardList($event);" [index]="i" id={{i}}></app-list>
+    </div>
+    <div class="addListBtn" fxFlex="15%">
+      <button (click)="addList();">Add List</button>
+    </div>
+  </div>

@@ -1,0 +1,7 @@
+<div fxLayout="row wrap"  fxLayoutGap="20px">
+    <div class="card cursor" fxFlex="82%" id="{{cardIndex}}" (click)="cardExpand();"> Card title 
+    </div>
+    <div fxFlex="10%" class="cursor">
+        <mat-icon (click)="deleteCard(cardIndex)" aria-hidden="false">delete</mat-icon>
+    </div>
+</div>
